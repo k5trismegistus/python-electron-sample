@@ -2,22 +2,19 @@
 <html>
   <head>
     {% block head %}
-    
+    {% endblock %}
     <!-- Load CSS and Javascript -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     
     <title>{% block title %}{% endblock %} - pyelectron</title>
-    {% endblock %}
   </head>
   
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-      {% endblock %}
-    </div>
+    {% include "partials/header_navbar.html" %}
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>    
   </body>
-  </html>
+</html>
