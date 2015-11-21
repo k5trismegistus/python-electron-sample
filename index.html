@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NOW LOADING</title>
+      <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+      <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    </head>
+  
+  <body>
+    <h1></h1>
+  </body>
+
+  <script type="text/javascript">
+    window.$ = window.jQuery = require('jquery');
+    var mainAddr = 'http://localhost:5000';
+    $.ajax({
+        type: 'HEAD',
+        url: mainAddr,
+        success: function() {
+            //alert('good');
+            location.replace(mainAddr);
+        },
+        error: function() {
+            alert('some errors happen...');
+            // page does not exist
+        }
+    });
+  </script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap-waitingfor/build/bootstrap-waitingfor.js"></script>
+  <script>
+    waitingDialog.show('I\'m waiting');
+  </script>
+</html>

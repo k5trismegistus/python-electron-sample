@@ -1,0 +1,21 @@
+{
+  "name": "pyelectron",
+  "description": "",
+  "main": "main.js",
+  "license": "BSD-2-Clause",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
