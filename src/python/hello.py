@@ -16,14 +16,6 @@ print(os.path.abspath(app.static_folder))
 
 @app.route("/")
 def hello():
-    # dbg = {
-    #     'current_dir': os.getcwd(),
-    #     'os.path.dirname(__file__): ': os.path.abspath(os.path.dirname(__file__)),
-    #     'root_dir': os.path.abspath(app_root_dir),
-    #     'views_dir': os.path.abspath(views_dir),
-    #     'static_folder': os.path.abspath(app.static_folder)
-    # }
-    # return str(dbg)
     return render_template('main.html')
 
 if __name__ == "__main__":

@@ -15,19 +15,22 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "1.11.3",
     "bootstrap": "~3.3.5"
   },
-  "exportsOverride":{
-    "bootstrap":{
+  "exportsOverride": {
+    "bootstrap": {
       "js": "**/bootstrap.js",
-      "css": ["**/bootstrap.min.css", "**/bootstrap-theme.min.css"] 
+      "css": [
+        "**/bootstrap.min.css",
+        "**/bootstrap-theme.min.css"
+      ]
     },
-    "bootstrap-waitingfor":{
+    "bootstrap-waitingfor": {
       "js": "**/waitingfor.js"
     },
-    "jquery":{
-      "js": "**/jquery.js"
+    "jquery": {
+      "js": "**/dist/jquery.min.js"
     }
   }
 }
