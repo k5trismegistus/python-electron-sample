@@ -4,9 +4,9 @@
     {% block head %}
     {% endblock %}
     <!-- Load CSS and Javascript -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href={{url_for('static', filename='css/bootstrap.min.css')}}  rel="stylesheet" />
+    <link href={{url_for('static', filename='css/bootstrap-theme.min.css')}}  rel="stylesheet" />
+    <script src={{url_for('static', filename='js/jquery.js')}}></script>
     
     <title>{% block title %}{% endblock %} - pyelectron</title>
   </head>

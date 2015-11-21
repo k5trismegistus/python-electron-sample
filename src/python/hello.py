@@ -1,20 +1,27 @@
-from __future__ import print_function
 import os, sys, time
 from flask import Flask
 from flask import render_template
 from jinja2 import FileSystemLoader
 
-app_root_dir = os.path.join(os.path.dirname(__file__) + '../../')
-views_dir = os.path.join(app_root_dir + 'views/')
+app_root_dir = os.path.join(os.path.dirname(__file__), '../../')
+views_dir = os.path.join(app_root_dir,  'views/')
 
-app = Flask(__name__)
+print(os.path.abspath(views_dir))
+app = Flask(__name__, static_folder=os.path.join(app_root_dir, 'lib'))
 app.jinja_loader = FileSystemLoader(views_dir)
+print(app.static_folder)
+app.static_folder = os.path.join(app_root_dir, 'lib')
+print(os.path.abspath(app.static_folder))
+
 
 @app.route("/")
 def hello():
     # dbg = {
+    #     'current_dir': os.getcwd(),
     #     'os.path.dirname(__file__): ': os.path.abspath(os.path.dirname(__file__)),
-    #     'views_dir': os.path.abspath(views_dir)
+    #     'root_dir': os.path.abspath(app_root_dir),
+    #     'views_dir': os.path.abspath(views_dir),
+    #     'static_folder': os.path.abspath(app.static_folder)
     # }
     # return str(dbg)
     return render_template('main.html')
